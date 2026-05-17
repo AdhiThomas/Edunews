@@ -11,27 +11,63 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
 
+
+/* =========================================
+   FIREBASE CONFIG
+========================================= */
+
 const firebaseConfig = {
+
   apiKey: "AIzaSyCM71hhF8teq4wyRKuLSJ0n5itbxjgeAOM",
+
   authDomain: "edunews-41a8b.firebaseapp.com",
+
   projectId: "edunews-41a8b",
+
   storageBucket: "edunews-41a8b.firebasestorage.app",
+
   messagingSenderId: "736814118538",
+
   appId: "1:736814118538:web:87a1cea6ab00e814fe1f73"
+
 };
 
 
+
+/* =========================================
+   INITIALIZE FIREBASE
+========================================= */
+
 const app = initializeApp(firebaseConfig);
+
+
+
+/* =========================================
+   FIRESTORE DATABASE
+========================================= */
 
 const db = getFirestore(app);
 
 
+
+/* =========================================
+   EXPORTS
+========================================= */
+
 export {
+
   db,
+
   collection,
+
   addDoc,
+
   query,
+
   orderBy,
+
   onSnapshot,
+
   serverTimestamp
-};
+
+};};
