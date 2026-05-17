@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EduNews</title>
-
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,28 +13,361 @@
   <section id="homePage" class="page active">
 
     <header class="topbar">
-      <div class="logo">EduNews</div>
-
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Edu<span class="logo-accent">News</span></span>
+      </div>
       <div class="search-box">
+        <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" placeholder="Search lessons, quizzes, topics..." />
         <button id="searchBtn">Search</button>
       </div>
+      <nav class="topnav">
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Community</a>
+      </nav>
     </header>
 
-
+    <!-- HERO -->
     <section class="hero">
-      <h1>Learn Smarter Everyday</h1>
-      <p>
-        Explore educational news, quizzes, lessons, coding tutorials,
-        business knowledge and learning resources.
-      </p>
+      <div class="hero-badge">🎓 The Future of Learning is Here</div>
+      <h1>Learn <span class="gradient-text">Smarter</span><br/>Every Day</h1>
+      <p>Explore educational news, interactive quizzes, coding tutorials, business insights and premium learning resources curated for you.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">Start Learning →</button>
+        <button class="btn-ghost">Explore Topics</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">12K+</span><span class="stat-label">Learners</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">300+</span><span class="stat-label">Lessons</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Topics</span></div>
+      </div>
     </section>
 
+    <!-- LATEST NEWS -->
+    <section class="content-section">
+      <div class="section-header">
+        <div class="section-label">📰 Latest Updates</div>
+        <h2 class="section-title">Educational News</h2>
+        <p class="section-sub">Stay ahead with the latest developments in education and technology.</p>
+      </div>
+      <div class="cards">
 
-    <section class="section-title">
-      <h2>Latest Educational News</h2>
+        <div class="card news-card" data-title="AI Revolution in Education" data-content="Artificial Intelligence is transforming modern education by helping students learn faster through personalized learning systems, AI tutors, adaptive quizzes, and interactive simulations. Schools worldwide are now integrating AI-powered tools — from intelligent grading to real-time feedback systems — to improve student engagement and make learning more efficient. Platforms like Khan Academy, Coursera, and Duolingo are leveraging AI to adapt course difficulty to individual learners. Researchers predict that by 2030, over 47% of learning tools will involve AI-driven personalization, making education accessible to students in remote areas and those with learning disabilities.">
+          <div class="card-tag">AI & EdTech</div>
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="AI in Education"/>
+          <div class="card-body">
+            <h3>AI Revolution in Education</h3>
+            <p>How artificial intelligence is reshaping classrooms and personalizing learning worldwide.</p>
+            <div class="card-meta"><span>🕐 5 min read</span><span class="card-arrow">→</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Future of Space Technology" data-content="Space technology is rapidly growing with reusable rockets, private space companies, moon missions and Mars exploration projects. SpaceX, Blue Origin, and NASA's Artemis program are pioneering new frontiers in human spaceflight. Engineers, scientists and programmers are becoming critically important in the future space industry. Universities are now offering dedicated aerospace engineering and astrodynamics programs to prepare the next generation. The commercial space industry is expected to be worth over $1 trillion by 2040, creating millions of jobs in engineering, data science, and satellite communications.">
+          <div class="card-tag">Science</div>
+          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop" alt="Space Technology"/>
+          <div class="card-body">
+            <h3>Future of Space Technology</h3>
+            <p>Engineering and science innovations powering humanity's next great adventure.</p>
+            <div class="card-meta"><span>🕐 6 min read</span><span class="card-arrow">→</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Business and Entrepreneurship" data-content="Entrepreneurship helps people build innovative solutions and create opportunities. Learning finance, communication, marketing and leadership are essential skills for modern entrepreneurs. In today's digital economy, startups can scale globally within months. Understanding product-market fit, lean startup methodology, venture capital, and digital marketing are crucial. Programs like Y Combinator and Techstars have produced thousands of successful founders. Gen Z entrepreneurs are launching businesses younger than ever, leveraging social media, e-commerce platforms, and AI tools to disrupt traditional industries.">
+          <div class="card-tag">Business</div>
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="Business"/>
+          <div class="card-body">
+            <h3>Business & Entrepreneurship</h3>
+            <p>Essential skills, mindsets, and strategies for the modern founder and business leader.</p>
+            <div class="card-meta"><span>🕐 4 min read</span><span class="card-arrow">→</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Climate Science & Green Tech" data-content="Climate science is one of the most important and rapidly growing fields of the 21st century. Green technology innovations including solar panels, wind turbines, hydrogen fuel cells, and carbon capture systems are being developed and deployed at record speed. Countries are investing trillions in renewable energy transitions. Students pursuing environmental science, green engineering, and sustainability management are finding incredible career opportunities. Electric vehicles, smart grids, and sustainable agriculture are reshaping economies. Education systems globally are integrating climate literacy into their core curricula to prepare future leaders for the challenges ahead.">
+          <div class="card-tag">Environment</div>
+          <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1200&auto=format&fit=crop" alt="Green Tech"/>
+          <div class="card-body">
+            <h3>Climate Science & Green Tech</h3>
+            <p>How education is embracing sustainability and preparing the next generation of green innovators.</p>
+            <div class="card-meta"><span>🕐 5 min read</span><span class="card-arrow">→</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Cybersecurity in the Digital Age" data-content="Cybersecurity has become one of the most critical and in-demand fields in technology. With millions of cyberattacks occurring daily, organizations are urgently seeking skilled professionals who can protect data, networks, and systems. Learning ethical hacking, network security, cryptography, and digital forensics opens doors to high-paying careers. Certifications like CEH, CISSP, and CompTIA Security+ are globally recognized. Educational platforms are offering hands-on labs, capture-the-flag competitions, and real-world simulations to train the next generation of cyber defenders. The global cybersecurity workforce gap currently stands at over 3.5 million unfilled positions.">
+          <div class="card-tag">Technology</div>
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop" alt="Cybersecurity"/>
+          <div class="card-body">
+            <h3>Cybersecurity in the Digital Age</h3>
+            <p>Why cybersecurity education is critical and how to start your journey in digital defense.</p>
+            <div class="card-meta"><span>🕐 7 min read</span><span class="card-arrow">→</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="The Rise of Online Education" data-content="Online education has permanently transformed how the world learns. Platforms like Coursera, edX, Udemy, and LinkedIn Learning have made world-class education accessible to billions. Micro-credentials, digital badges, and stackable certificates are now recognized by top employers. The COVID-19 pandemic accelerated adoption by a decade, and the industry has never looked back. Hybrid learning models combining in-person and digital experiences are now the standard at leading universities. Studies show that online learners often outperform traditional classroom students when they have strong self-discipline and goal clarity. The global e-learning market is projected to exceed $400 billion by 2026.">
+          <div class="card-tag">EdTech</div>
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Online Education"/>
+          <div class="card-body">
+            <h3>The Rise of Online Education</h3>
+            <p>How digital platforms are democratizing access to world-class learning opportunities.</p>
+            <div class="card-meta"><span>🕐 5 min read</span><span class="card-arrow">→</span></div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
+    <!-- LEARNING TOPICS -->
+    <section class="content-section alt-section">
+      <div class="section-header">
+        <div class="section-label">📚 Tutorials & Lessons</div>
+        <h2 class="section-title">Learning Topics</h2>
+        <p class="section-sub">Structured lessons to build real skills from the ground up.</p>
+      </div>
+      <div class="lesson-grid">
+
+        <div class="lesson-card" data-title="HTML Basics" data-content="HTML (HyperText Markup Language) is the backbone of every webpage on the internet. It provides the structure and content of a webpage using elements called tags. Common tags include h1-h6 for headings, p for paragraphs, img for images, a for links, div for containers, and form for input forms. HTML5 introduced semantic tags like header, nav, main, section, article, and footer that make web pages more readable and accessible. Understanding HTML is the first step toward becoming a web developer. Every website you've ever visited — from Google to YouTube — is built on HTML at its foundation.">
+          <div class="lesson-icon">🌐</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">Web Dev</span>
+            <h3>HTML Basics</h3>
+            <p>Master the building blocks of every webpage — structure, tags, and semantic markup.</p>
+            <div class="lesson-footer"><span class="diff beginner">Beginner</span><span>8 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="CSS Styling" data-content="CSS (Cascading Style Sheets) is used to design, style, and visually present webpages. It controls everything from colors, fonts, and spacing to complex layouts using Flexbox and CSS Grid. CSS3 introduced powerful features like transitions, animations, gradients, custom variables, and media queries for responsive design. Modern CSS techniques include glassmorphism, neumorphism, dark mode support, and complex grid systems. Understanding CSS deeply is what separates average web developers from talented designers. Mastering CSS gives you creative control over how every element looks and behaves on screen.">
+          <div class="lesson-icon">🎨</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">Web Dev</span>
+            <h3>CSS Styling</h3>
+            <p>Design stunning, responsive websites using modern CSS techniques and animations.</p>
+            <div class="lesson-footer"><span class="diff beginner">Beginner</span><span>10 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="JavaScript Fundamentals" data-content="JavaScript is the world's most popular programming language and the only language that runs natively in web browsers. It adds interactivity, logic, and dynamic behavior to websites. Core concepts include variables, data types, functions, loops, arrays, objects, and DOM manipulation. Modern JavaScript (ES6+) introduced arrow functions, destructuring, promises, async/await, and modules. JavaScript powers everything from simple button clicks to complex single-page applications. With Node.js, JavaScript now also runs on the server side, making it a full-stack language. Frameworks like React, Vue, and Angular are built entirely on JavaScript.">
+          <div class="lesson-icon">⚡</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">Programming</span>
+            <h3>JavaScript Fundamentals</h3>
+            <p>Bring websites to life with logic, interactivity, and modern ES6+ features.</p>
+            <div class="lesson-footer"><span class="diff intermediate">Intermediate</span><span>14 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Python Programming" data-content="Python is one of the world's most versatile and beginner-friendly programming languages. It's used in web development (Django, Flask), data science (Pandas, NumPy), machine learning (TensorFlow, PyTorch), automation, scripting, and cybersecurity. Python's clean syntax and readability make it the most popular first language for beginners. Core topics include variables, lists, dictionaries, loops, functions, OOP, file handling, and APIs. Python developers are among the highest-paid in the tech industry. Whether you want to build web apps, analyze data, create AI models, or automate repetitive tasks, Python is the essential tool to master.">
+          <div class="lesson-icon">🐍</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">Programming</span>
+            <h3>Python Programming</h3>
+            <p>From scripting to AI — learn the world's most versatile and in-demand language.</p>
+            <div class="lesson-footer"><span class="diff beginner">Beginner</span><span>16 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Data Science & Analytics" data-content="Data Science is the art of extracting meaningful insights from large datasets. It combines statistics, programming, and domain expertise to solve real-world problems. Core skills include data cleaning, exploratory data analysis, visualization (Matplotlib, Seaborn), statistical modeling, and machine learning. Tools like Jupyter Notebooks, SQL, Tableau, and Power BI are widely used in industry. Data scientists work in finance, healthcare, e-commerce, government, and virtually every sector. The average data scientist salary exceeds $120,000/year. Learning data science opens doors to roles like Data Analyst, ML Engineer, Business Intelligence Analyst, and AI Researcher.">
+          <div class="lesson-icon">📊</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">Data</span>
+            <h3>Data Science & Analytics</h3>
+            <p>Unlock the power of data — visualize, analyze, and draw impactful insights.</p>
+            <div class="lesson-footer"><span class="diff intermediate">Intermediate</span><span>12 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="UI/UX Design Principles" data-content="UI/UX Design is the discipline of creating intuitive, beautiful, and user-centered digital experiences. UI (User Interface) focuses on visual design — colors, typography, icons, and layout. UX (User Experience) focuses on how users feel when interacting with a product — flows, usability, accessibility, and satisfaction. Core principles include Gestalt theory, Fitts's Law, color psychology, typography hierarchy, and responsive design. Tools used include Figma, Adobe XD, Sketch, and InVision. Great UX design reduces user frustration, increases engagement, and drives business growth. Designers who understand both aesthetics and psychology are among the most valued in the tech industry.">
+          <div class="lesson-icon">✏️</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">Design</span>
+            <h3>UI/UX Design Principles</h3>
+            <p>Design experiences users love — master color, layout, typography, and user psychology.</p>
+            <div class="lesson-footer"><span class="diff beginner">Beginner</span><span>9 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Machine Learning Basics" data-content="Machine Learning (ML) is a branch of artificial intelligence that enables computers to learn from data without being explicitly programmed. Core ML concepts include supervised learning, unsupervised learning, reinforcement learning, neural networks, and deep learning. Algorithms like linear regression, decision trees, random forests, k-means clustering, and SVMs form the foundation. Libraries like scikit-learn, TensorFlow, and PyTorch are industry standards. ML powers search engines, recommendation systems, fraud detection, medical diagnosis, and autonomous vehicles. Prerequisites include Python programming, linear algebra, statistics, and calculus. A strong ML engineer is one of the most sought-after and highest-paid roles in today's job market.">
+          <div class="lesson-icon">🤖</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">AI / ML</span>
+            <h3>Machine Learning Basics</h3>
+            <p>Understand how machines learn — from regression to neural networks and beyond.</p>
+            <div class="lesson-footer"><span class="diff advanced">Advanced</span><span>18 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Cloud Computing Fundamentals" data-content="Cloud computing delivers computing services — servers, storage, databases, networking, software, analytics — over the internet to offer faster innovation, flexible resources, and cost efficiency. Major cloud providers include AWS (Amazon Web Services), Microsoft Azure, and Google Cloud Platform. Key concepts include IaaS, PaaS, SaaS, virtualization, containers (Docker), orchestration (Kubernetes), serverless architecture, and cloud security. Cloud certifications like AWS Certified Solutions Architect and Google Cloud Professional are highly valued. As businesses move infrastructure to the cloud, demand for cloud professionals continues to surge globally. Cloud computing is foundational knowledge for any modern software engineer or IT professional.">
+          <div class="lesson-icon">☁️</div>
+          <div class="lesson-info">
+            <span class="lesson-tag">DevOps</span>
+            <h3>Cloud Computing Fundamentals</h3>
+            <p>Understand AWS, Azure, and GCP — deploy, scale, and secure modern cloud systems.</p>
+            <div class="lesson-footer"><span class="diff intermediate">Intermediate</span><span>11 lessons</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUIZZES -->
+    <section class="content-section">
+      <div class="section-header">
+        <div class="section-label">🧠 Test Your Knowledge</div>
+        <h2 class="section-title">Quick Quizzes</h2>
+        <p class="section-sub">Challenge yourself with topic-specific quizzes and see how much you know.</p>
+      </div>
+
+      <div class="quiz-grid">
+
+        <!-- Quiz 1 -->
+        <div class="quiz-box" id="quiz1">
+          <div class="quiz-topic-badge">🌐 Web Dev</div>
+          <h3>What does HTML stand for?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">Hyper Trainer Marking Language</button>
+            <button class="quiz-option" data-correct="true">Hyper Text Markup Language</button>
+            <button class="quiz-option" data-correct="false">High Text Machine Language</button>
+            <button class="quiz-option" data-correct="false">Hyper Tool Multi Language</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <!-- Quiz 2 -->
+        <div class="quiz-box" id="quiz2">
+          <div class="quiz-topic-badge">⚡ JavaScript</div>
+          <h3>Which keyword declares a constant in JavaScript?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">var</button>
+            <button class="quiz-option" data-correct="false">let</button>
+            <button class="quiz-option" data-correct="true">const</button>
+            <button class="quiz-option" data-correct="false">define</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <!-- Quiz 3 -->
+        <div class="quiz-box" id="quiz3">
+          <div class="quiz-topic-badge">🎨 CSS</div>
+          <h3>Which CSS property controls text size?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">text-style</button>
+            <button class="quiz-option" data-correct="false">font-weight</button>
+            <button class="quiz-option" data-correct="true">font-size</button>
+            <button class="quiz-option" data-correct="false">text-size</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <!-- Quiz 4 -->
+        <div class="quiz-box" id="quiz4">
+          <div class="quiz-topic-badge">🐍 Python</div>
+          <h3>Which symbol is used for comments in Python?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">//</button>
+            <button class="quiz-option" data-correct="true">#</button>
+            <button class="quiz-option" data-correct="false">/* */</button>
+            <button class="quiz-option" data-correct="false">--</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <!-- Quiz 5 -->
+        <div class="quiz-box" id="quiz5">
+          <div class="quiz-topic-badge">🤖 AI & ML</div>
+          <h3>What does GPU stand for?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">General Processing Unit</button>
+            <button class="quiz-option" data-correct="true">Graphics Processing Unit</button>
+            <button class="quiz-option" data-correct="false">Global Program Utility</button>
+            <button class="quiz-option" data-correct="false">Graphical Program Unit</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <!-- Quiz 6 -->
+        <div class="quiz-box" id="quiz6">
+          <div class="quiz-topic-badge">☁️ Cloud</div>
+          <h3>What does "SaaS" stand for?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">System as a Service</button>
+            <button class="quiz-option" data-correct="false">Storage as a Server</button>
+            <button class="quiz-option" data-correct="true">Software as a Service</button>
+            <button class="quiz-option" data-correct="false">Server as a System</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">Edu<span class="logo-accent">News</span></span>
+          <p>Empowering learners worldwide with premium educational content.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <a href="#">Courses</a><a href="#">Quizzes</a><a href="#">Community</a>
+        </div>
+        <div class="footer-links">
+          <h4>Topics</h4>
+          <a href="#">Web Dev</a><a href="#">AI & ML</a><a href="#">Data Science</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 EduNews. All rights reserved.</div>
+    </footer>
+
+  </section>
+
+
+  <!-- CHAT PAGE -->
+  <section id="chatPage" class="page">
+
+    <header class="chat-header">
+      <div class="left-header">
+        <button id="backBtn">← Back</button>
+        <div class="chat-room-info">
+          <h2 id="roomTitle">Chat Room</h2>
+          <span class="room-status">● Live</span>
+        </div>
+      </div>
+      <div class="user-switch" id="userSwitch">
+        <!-- Populated by JS -->
+      </div>
+    </header>
+
+    <div id="messages" class="messages"></div>
+
+    <div class="chat-input-box">
+      <input type="text" id="messageInput" placeholder="Type your message..." />
+      <button id="sendBtn">Send ✉</button>
+    </div>
+
+  </section>
+
+
+  <!-- CONTENT MODAL -->
+  <div id="contentModal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal">✕ Close</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <!-- QUIZ RESULT (legacy id kept for compatibility) -->
+  <div id="quizResult" style="display:none;"></div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+  </html>
 
     <section class="cards">
 
