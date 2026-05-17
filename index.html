@@ -1,40 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>EduNews Premium</title>
+
   <link rel="stylesheet" href="style.css" />
+
 </head>
+
 <body>
 
-<div class="background-glow glow-1"></div>
-<div class="background-glow glow-2"></div>
-<div class="background-glow glow-3"></div>
 
-<section id="homePage" class="page active">
+  <!-- =========================================
+       PREMIUM BACKGROUND GLOWS
+  ========================================== -->
 
-  <header class="topbar glass">
-    <div class="logo-area">
-      <div class="logo-icon"></div>
-      <div>
-        <h1 class="logo">EduNews</h1>
-        <p class="logo-sub">Premium Learning Platform</p>
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+  <div class="background-glow glow-3"></div>
+
+
+
+  <!-- =========================================
+       HOME PAGE
+  ========================================== -->
+
+  <section id="homePage" class="page active">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar glass">
+
+      <div class="logo-area">
+
+        <div class="logo-icon"></div>
+
+        <div>
+
+          <h1 class="logo">EduNews</h1>
+
+          <p class="logo-sub">
+            Premium Learning Platform
+          </p>
+
+        </div>
+
       </div>
+
+
+
+      <!-- SEARCH -->
+
+      <div class="search-box glass">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search lessons, quizzes, topics..."
+          autocomplete="off"
+        />
+
+        <button id="searchBtn">
+          Search
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero premium-section">
+
+      <div class="hero-content">
+
+        <span class="hero-badge">
+          Future Education Platform
+        </span>
+
+        <h1>
+          Upgrade Your Knowledge Everyday
+        </h1>
+
+        <p>
+          Learn programming, AI, science, business,
+          technology, finance, and future skills
+          through a premium educational experience.
+        </p>
+
+        <div class="hero-buttons">
+
+          <button class="primary-btn">
+            Explore Courses
+          </button>
+
+          <button class="secondary-btn">
+            Start Learning
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         LATEST NEWS
+    ========================================== -->
+
+    <section class="content-section premium-section">
+
+      <div class="section-heading">
+
+        <h2>Latest News</h2>
+
+        <p>
+          Educational updates and technology insights
+        </p>
+
+      </div>
+
+
+
+      <div class="premium-grid">
+
+
+        <div
+          class="card news-card glass"
+          data-title="AI Revolution in Education"
+          data-content="Artificial Intelligence is transforming classrooms worldwide through adaptive learning, AI tutors, smart educational systems, and personalized learning experiences."
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+          />
+
+          <div class="card-content">
+
+            <h3>AI Revolution in Education</h3>
+
+            <p>
+              How AI is changing modern classrooms.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div
+          class="card news-card glass"
+          data-title="Future Space Missions"
+          data-content="Modern space companies are preparing advanced lunar bases, reusable rockets, and Mars exploration missions."
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop"
+          />
+
+          <div class="card-content">
+
+            <h3>Future Space Missions</h3>
+
+            <p>
+              Scientific engineering breakthroughs.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div
+          class="card news-card glass"
+          data-title="Cybersecurity Careers"
+          data-content="Cybersecurity is becoming one of the fastest-growing industries as digital systems continue expanding globally."
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+          />
+
+          <div class="card-content">
+
+            <h3>Cybersecurity Careers</h3>
+
+            <p>
+              Security careers are growing rapidly.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div
+          class="card news-card glass"
+          data-title="Modern Entrepreneurship"
+          data-content="Entrepreneurship combines innovation, leadership, finance, AI, and technology to build future businesses."
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+          />
+
+          <div class="card-content">
+
+            <h3>Modern Entrepreneurship</h3>
+
+            <p>
+              Future startup and business skills.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         LEARNING TOPICS
+    ========================================== -->
+
+    <section
+      class="content-section premium-section section-alt"
+    >
+
+      <div class="section-heading">
+
+        <h2>Learning Topics</h2>
+
+        <p>
+          Professional tutorials and educational lessons
+        </p>
+
+      </div>
+
+
+
+      <div class="premium-grid">
+
+
+        <div
+          class="lesson-card glass"
+          data-title="HTML Basics"
+          data-content="HTML builds the structure of websites using semantic tags, layouts, forms, media systems, and content organization."
+        >
+
+          <h3>HTML Basics</h3>
+
+          <p>
+            Build website structures professionally.
+          </p>
+
+        </div>
+
+
+
+        <div
+          class="lesson-card glass"
+          data-title="CSS Premium Design"
+          data-content="CSS controls premium UI systems including animations, responsive layouts, typography, spacing, gradients, and luxury interfaces."
+        >
+
+          <h3>CSS Premium Design</h3>
+
+          <p>
+            Create luxury modern interfaces.
+          </p>
+
+        </div>
+
+
+
+        <div
+          class="lesson-card glass"
+          data-title="JavaScript Logic"
+          data-content="JavaScript powers modern web applications through APIs, DOM systems, interactivity, dynamic rendering, and logic programming."
+        >
+
+          <h3>JavaScript Logic</h3>
+
+          <p>
+            Make applications interactive.
+          </p>
+
+        </div>
+
+
+
+        <div
+          class="lesson-card glass"
+          data-title="Firebase Realtime Database"
+          data-content="Firebase enables cloud databases, authentication systems, scalable backend services, and real-time synchronization."
+        >
+
+          <h3>Firebase Realtime</h3>
+
+          <p>
+            Cloud backend development.
+          </p>
+
+        </div>
+
+
+
+        <div
+          class="lesson-card glass"
+          data-title="Business Finance"
+          data-content="Learn investment systems, profit models, budgeting, startup finance, and modern financial strategies."
+        >
+
+          <h3>Business Finance</h3>
+
+          <p>
+            Understand financial systems.
+          </p>
+
+        </div>
+
+
+
+        <div
+          class="lesson-card glass"
+          data-title="Artificial Intelligence"
+          data-content="AI includes machine learning, neural networks, automation systems, future intelligent software, and predictive analytics."
+        >
+
+          <h3>Artificial Intelligence</h3>
+
+          <p>
+            Future technologies and automation.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         QUIZZES
+    ========================================== -->
+
+    <section class="content-section premium-section">
+
+      <div class="section-heading">
+
+        <h2>Interactive Quizzes</h2>
+
+        <p>
+          Test your educational knowledge
+        </p>
+
+      </div>
+
+
+
+      <div class="quiz-container">
+
+
+        <div class="quiz-box glass">
+
+          <h3>
+            What does HTML stand for?
+          </h3>
+
+          <button
+            class="quiz-option"
+            data-correct="false"
+          >
+            Hyper Trainer Marking Language
+          </button>
+
+          <button
+            class="quiz-option"
+            data-correct="true"
+          >
+            Hyper Text Markup Language
+          </button>
+
+          <button
+            class="quiz-option"
+            data-correct="false"
+          >
+            Hyper Tool Multi Language
+          </button>
+
+          <button
+            class="quiz-option"
+            data-correct="false"
+          >
+            High Text Machine Language
+          </button>
+
+        </div>
+
+
+
+        <div class="quiz-box glass">
+
+          <h3>
+            Which language powers website interactivity?
+          </h3>
+
+          <button
+            class="quiz-option"
+            data-correct="false"
+          >
+            HTML
+          </button>
+
+          <button
+            class="quiz-option"
+            data-correct="true"
+          >
+            JavaScript
+          </button>
+
+          <button
+            class="quiz-option"
+            data-correct="false"
+          >
+            Photoshop
+          </button>
+
+          <button
+            class="quiz-option"
+            data-correct="false"
+          >
+            Excel
+          </button>
+
+        </div>
+
+
+      </div>
+
+      <div id="quizResult"></div>
+
+    </section>
+
+  </section>
+
+
+
+  <!-- =========================================
+       CHAT PAGE
+  ========================================== -->
+
+  <section id="chatPage" class="page">
+
+
+    <header class="chat-header glass">
+
+      <div class="left-header">
+
+        <button id="backBtn">
+          Back
+        </button>
+
+        <h2 id="roomTitle">
+          Chat Room
+        </h2>
+
+      </div>
+
+
+
+      <div class="user-switch">
+
+        <button
+          class="user-btn active-user"
+          data-user="Adhi"
+        >
+          Adhi
+        </button>
+
+        <button
+          class="user-btn"
+          data-user="Vishnu"
+        >
+          Vishnu
+        </button>
+
+        <button
+          class="user-btn"
+          data-user="Visva"
+        >
+          Visva
+        </button>
+
+        <button
+          class="user-btn"
+          data-user="Nidharshana"
+        >
+          Nidharshana
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- MESSAGES -->
+
+    <div id="messages" class="messages"></div>
+
+
+
+    <!-- CHAT INPUT -->
+
+    <div class="chat-input-box glass">
+
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Type message..."
+        autocomplete="off"
+      />
+
+      <button id="sendBtn">
+        Send
+      </button>
+
     </div>
 
-    <div class="search-box glass">
-      <input type="text" id="searchInput" placeholder="Search lessons, quizzes, topics..." />
-      <button id="searchBtn">Search</button>
-    </div>
-  </header>
+  </section>
 
-  <section class="hero premium-section">
-    <div class="hero-content">
-      <span class="hero-badge">Future Education Platform</span>
-      <h1>Upgrade Your Knowledge Everyday</h1>
-      <p>
-        Learn programming, science, business, AI, finance, and future technologies through premium interactive educational content.
+
+
+  <!-- =========================================
+       CONTENT MODAL
+  ========================================== -->
+
+  <div id="contentModal" class="modal">
+
+    <div class="modal-content glass">
+
+      <button id="closeModal">
+        Close
+      </button>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalText"></p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       JAVASCRIPT FILES
+  ========================================== -->
+
+  <script
+    type="module"
+    src="firebase.js"
+  ></script>
+
+  <script
+    type="module"
+    src="index.js"
+  ></script>
+
+</body>
+</html>        Learn programming, science, business, AI, finance, and future technologies through premium interactive educational content.
       </p>
 
       <div class="hero-buttons">
