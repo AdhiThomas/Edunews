@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduNews</title>
+  <title>EduNews — Learn Smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -14,27 +15,380 @@
 
     <header class="topbar">
       <div class="logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">Edu<span class="logo-accent">News</span></span>
+        <span class="logo-icon">✦</span>
+        <span>EduNews</span>
       </div>
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Search lessons, quizzes, topics..." />
-        <button id="searchBtn">Search</button>
-      </div>
-      <nav class="topnav">
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
+      <nav class="nav-links">
+        <a href="#">News</a>
+        <a href="#">Lessons</a>
+        <a href="#">Quizzes</a>
         <a href="#">Community</a>
       </nav>
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Search or type a room name..." />
+        <button id="searchBtn">Search</button>
+      </div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-badge">🎓 The Future of Learning is Here</div>
+      <div class="hero-badge">🚀 Premium Learning Platform</div>
       <h1>Learn <span class="gradient-text">Smarter</span><br/>Every Day</h1>
-      <p>Explore educational news, interactive quizzes, coding tutorials, business insights and premium learning resources curated for you.</p>
-      <div class="hero-actions">
+      <p>Explore curated educational news, interactive quizzes, coding lessons, business knowledge and world-class learning resources — all in one place.</p>
+      <div class="hero-cta">
+        <button class="btn-primary">Start Learning</button>
+        <button class="btn-ghost">Browse Topics →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Topics</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Quizzes</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Live</span><span class="stat-label">Chat Rooms</span></div>
+      </div>
+    </section>
+
+    <!-- LATEST NEWS -->
+    <section class="home-section">
+      <div class="section-header">
+        <div class="section-label">📰 Latest News</div>
+        <h2 class="section-title">Educational Headlines</h2>
+        <p class="section-sub">Stay updated with the latest breakthroughs in education and technology.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card news-card" data-title="AI Revolution in Education" data-content="Artificial Intelligence is transforming modern education by helping students learn faster through personalized learning systems, AI tutors, adaptive quizzes, and interactive simulations. Schools integrating AI-powered tools report up to 40% improvement in student engagement. Platforms like Khan Academy and Duolingo already use AI to adapt content difficulty based on individual performance, making learning more efficient and enjoyable for millions worldwide.">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="AI in Education"/>
+            <div class="card-tag">AI & Tech</div>
+          </div>
+          <div class="card-body">
+            <h3>AI Revolution in Education</h3>
+            <p>How artificial intelligence is reshaping classrooms and personalizing learning worldwide.</p>
+            <div class="card-meta"><span>📅 May 2026</span><span>5 min read</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Future of Space Technology" data-content="Space technology is accelerating at an unprecedented pace. Reusable rockets by SpaceX and Blue Origin have cut launch costs by 90%. NASA's Artemis program is actively training astronauts for a return to the Moon by 2026, while Mars missions are planned for the early 2030s. Private companies are competing to build lunar habitats and space stations. Engineers, data scientists, and programmers are among the most sought-after talents in the growing space economy.">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop" alt="Space Technology"/>
+            <div class="card-tag">Science</div>
+          </div>
+          <div class="card-body">
+            <h3>Future of Space Technology</h3>
+            <p>Rockets, Mars missions, and why STEM skills are the passport to the new space economy.</p>
+            <div class="card-meta"><span>📅 May 2026</span><span>6 min read</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Business and Entrepreneurship" data-content="Entrepreneurship is no longer limited to a select few. With the rise of no-code tools, digital marketing, and global connectivity, anyone with a great idea can build a startup. Learning core business skills — financial literacy, negotiation, leadership, and product design — gives aspiring founders a competitive edge. Many universities now offer entrepreneurship bootcamps, and accelerators like Y Combinator fund thousands of startups globally each year.">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="Business"/>
+            <div class="card-tag">Business</div>
+          </div>
+          <div class="card-body">
+            <h3>Business and Entrepreneurship</h3>
+            <p>Essential skills modern founders need to launch, grow, and scale successful ventures.</p>
+            <div class="card-meta"><span>📅 May 2026</span><span>4 min read</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="The Rise of Online Education" data-content="Online education has exploded since 2020, with platforms like Coursera, edX, and Udemy collectively hosting over 200,000 courses. Micro-credentials and digital certificates are now recognized by Fortune 500 companies as valid qualifications. Students in developing nations can now access Ivy League content for free. The e-learning market is projected to reach $400 billion by 2026, fundamentally disrupting traditional education systems.">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?q=80&w=1200&auto=format&fit=crop" alt="Online Learning"/>
+            <div class="card-tag">EdTech</div>
+          </div>
+          <div class="card-body">
+            <h3>The Rise of Online Education</h3>
+            <p>How digital platforms are democratizing access to world-class knowledge globally.</p>
+            <div class="card-meta"><span>📅 May 2026</span><span>5 min read</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Climate Science in Schools" data-content="Educators worldwide are integrating climate science into core curricula. Students learn about renewable energy, carbon cycles, sustainability, and green engineering. Projects like solar-powered school buildings and student-led recycling programs are now common. Understanding climate science is increasingly considered a foundational literacy skill, alongside mathematics and reading, as the world works to address the global climate crisis.">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop" alt="Climate Science"/>
+            <div class="card-tag">Environment</div>
+          </div>
+          <div class="card-body">
+            <h3>Climate Science in Schools</h3>
+            <p>Why environmental literacy is becoming a must-have skill for the next generation.</p>
+            <div class="card-meta"><span>📅 May 2026</span><span>4 min read</span></div>
+          </div>
+        </div>
+
+        <div class="card news-card" data-title="Mental Health & Student Wellbeing" data-content="Academic institutions globally are prioritizing student mental health after research showed 1 in 3 students experiences anxiety. Schools are hiring dedicated counselors, introducing mindfulness programs, and reducing exam pressure through continuous assessment models. Apps like Headspace and Calm are partnering with universities. Studies confirm that students with good mental health perform up to 35% better academically, making wellbeing a core educational priority.">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?q=80&w=1200&auto=format&fit=crop" alt="Mental Health"/>
+            <div class="card-tag">Wellbeing</div>
+          </div>
+          <div class="card-body">
+            <h3>Mental Health & Student Wellbeing</h3>
+            <p>Schools worldwide are making student wellness a top academic priority.</p>
+            <div class="card-meta"><span>📅 May 2026</span><span>4 min read</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEARNING TOPICS -->
+    <section class="home-section alt-section">
+      <div class="section-header">
+        <div class="section-label">📚 Learning Topics</div>
+        <h2 class="section-title">Explore Lessons</h2>
+        <p class="section-sub">Structured lessons across coding, science, mathematics, and more.</p>
+      </div>
+      <div class="topics-grid">
+
+        <div class="lesson-card" data-title="HTML Basics" data-content="HTML (HyperText Markup Language) is the backbone of every webpage. It uses a system of elements represented by tags — such as h1 for headings, p for paragraphs, img for images, a for links, and div for layout containers. HTML defines the structure and meaning (semantics) of web content. A solid understanding of HTML is the first step toward becoming a web developer. Modern HTML5 also supports audio, video, canvas, and local storage APIs.">
+          <div class="lesson-icon">🌐</div>
+          <div class="lesson-body">
+            <h3>HTML Basics</h3>
+            <p>Master the structure and semantics of modern web pages.</p>
+            <div class="lesson-meta"><span class="level beginner">Beginner</span><span>8 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="CSS Styling" data-content="CSS (Cascading Style Sheets) controls the visual presentation of HTML elements. It manages layout, colors, fonts, spacing, animations, and responsive design. Modern CSS includes powerful tools like Flexbox for one-dimensional layouts, CSS Grid for two-dimensional layouts, custom properties (variables), and media queries for mobile-first design. Mastering CSS allows you to build visually stunning, professional websites that work across all screen sizes and devices.">
+          <div class="lesson-icon">🎨</div>
+          <div class="lesson-body">
+            <h3>CSS Styling</h3>
+            <p>Design beautiful, responsive websites with modern CSS techniques.</p>
+            <div class="lesson-meta"><span class="level beginner">Beginner</span><span>12 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="JavaScript Fundamentals" data-content="JavaScript is the programming language of the web. It adds interactivity, logic, and dynamic behavior to websites. Core concepts include variables, functions, loops, DOM manipulation, event handling, and asynchronous programming with Promises and async/await. JavaScript also powers backend systems via Node.js, and frameworks like React, Vue, and Angular make building complex web apps more manageable. It's consistently ranked as the world's most used programming language.">
+          <div class="lesson-icon">⚡</div>
+          <div class="lesson-body">
+            <h3>JavaScript Fundamentals</h3>
+            <p>Add interactivity, logic, and dynamic behavior to your websites.</p>
+            <div class="lesson-meta"><span class="level intermediate">Intermediate</span><span>15 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Python Programming" data-content="Python is one of the most versatile and beginner-friendly programming languages. It's used in web development (Django, Flask), data science (Pandas, NumPy), machine learning (TensorFlow, PyTorch), automation, and scripting. Python's clean syntax makes it ideal for learning programming concepts. It's the primary language used in AI research and data analysis. Learning Python opens doors in virtually every technology field, from finance to healthcare.">
+          <div class="lesson-icon">🐍</div>
+          <div class="lesson-body">
+            <h3>Python Programming</h3>
+            <p>Learn the language powering AI, data science, and automation.</p>
+            <div class="lesson-meta"><span class="level beginner">Beginner</span><span>20 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Data Science Essentials" data-content="Data Science combines statistics, programming, and domain knowledge to extract insights from data. Key skills include data cleaning, exploratory analysis, visualization (using Matplotlib, Seaborn), statistical modeling, and machine learning fundamentals. Tools like Jupyter Notebooks make experimentation easy. Data scientists are among the highest-paid professionals globally. Understanding data is now considered a critical skill in business, government, healthcare, and virtually every industry.">
+          <div class="lesson-icon">📊</div>
+          <div class="lesson-body">
+            <h3>Data Science Essentials</h3>
+            <p>Turn raw data into powerful insights with statistics and Python.</p>
+            <div class="lesson-meta"><span class="level intermediate">Intermediate</span><span>18 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Mathematics for Developers" data-content="Mathematics is the foundation of computer science and programming. Key areas include algebra (for programming logic), discrete mathematics (for algorithms), probability and statistics (for data science and ML), linear algebra (for graphics and AI), and calculus (for optimization in machine learning). You don't need to be a mathematician to code, but understanding these fundamentals will make you a significantly better engineer and help you solve complex problems with confidence.">
+          <div class="lesson-icon">🔢</div>
+          <div class="lesson-body">
+            <h3>Mathematics for Developers</h3>
+            <p>The essential math concepts every programmer needs to know.</p>
+            <div class="lesson-meta"><span class="level intermediate">Intermediate</span><span>14 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="UI/UX Design Principles" data-content="UI (User Interface) design focuses on how a product looks, while UX (User Experience) focuses on how it feels to use. Core principles include visual hierarchy, color theory, typography, whitespace, accessibility, and responsive design. Tools like Figma are industry-standard for prototyping. Understanding user psychology — how people perceive and interact with interfaces — is crucial. Great design increases user retention, trust, and conversion rates for digital products.">
+          <div class="lesson-icon">✏️</div>
+          <div class="lesson-body">
+            <h3>UI/UX Design Principles</h3>
+            <p>Design digital experiences that are beautiful and user-friendly.</p>
+            <div class="lesson-meta"><span class="level beginner">Beginner</span><span>10 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Cloud Computing Basics" data-content="Cloud computing delivers computing services — servers, storage, databases, networking, and software — over the internet. Major providers include AWS, Google Cloud, and Microsoft Azure. Key concepts include virtual machines, containers (Docker, Kubernetes), serverless functions, CDN, and cloud storage. Cloud skills are in extremely high demand as companies migrate infrastructure away from on-premise servers. Certifications from AWS or Google Cloud significantly boost career prospects and earning potential.">
+          <div class="lesson-icon">☁️</div>
+          <div class="lesson-body">
+            <h3>Cloud Computing Basics</h3>
+            <p>Understand AWS, Azure, and Google Cloud infrastructure fundamentals.</p>
+            <div class="lesson-meta"><span class="level intermediate">Intermediate</span><span>11 lessons</span></div>
+          </div>
+        </div>
+
+        <div class="lesson-card" data-title="Cybersecurity Fundamentals" data-content="Cybersecurity protects digital systems, networks, and data from attacks, theft, and damage. Core topics include encryption, firewalls, ethical hacking, social engineering, network security, and secure coding practices. With cyberattacks costing the global economy trillions annually, cybersecurity professionals are in massive demand. Fields include penetration testing, incident response, digital forensics, and security engineering. Learning cybersecurity is both intellectually challenging and financially rewarding.">
+          <div class="lesson-icon">🔐</div>
+          <div class="lesson-body">
+            <h3>Cybersecurity Fundamentals</h3>
+            <p>Protect systems and data in an increasingly digital threat landscape.</p>
+            <div class="lesson-meta"><span class="level advanced">Advanced</span><span>16 lessons</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUIZZES -->
+    <section class="home-section">
+      <div class="section-header">
+        <div class="section-label">🧠 Quizzes</div>
+        <h2 class="section-title">Test Your Knowledge</h2>
+        <p class="section-sub">Challenge yourself with interactive quizzes across multiple subjects.</p>
+      </div>
+      <div class="quizzes-grid">
+
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <span class="quiz-category">Web Development</span>
+            <span class="quiz-difficulty easy">Easy</span>
+          </div>
+          <h3>What does HTML stand for?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">Hyper Trainer Marking Language</button>
+            <button class="quiz-option" data-correct="true">Hyper Text Markup Language</button>
+            <button class="quiz-option" data-correct="false">High Text Machine Language</button>
+            <button class="quiz-option" data-correct="false">Hyper Tool Multi Language</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <span class="quiz-category">Programming</span>
+            <span class="quiz-difficulty medium">Medium</span>
+          </div>
+          <h3>Which language is primarily used for styling web pages?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">JavaScript</button>
+            <button class="quiz-option" data-correct="false">Python</button>
+            <button class="quiz-option" data-correct="true">CSS</button>
+            <button class="quiz-option" data-correct="false">SQL</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <span class="quiz-category">Data Science</span>
+            <span class="quiz-difficulty medium">Medium</span>
+          </div>
+          <h3>Which Python library is used for data manipulation?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">NumPy</button>
+            <button class="quiz-option" data-correct="true">Pandas</button>
+            <button class="quiz-option" data-correct="false">Matplotlib</button>
+            <button class="quiz-option" data-correct="false">Seaborn</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <span class="quiz-category">Networking</span>
+            <span class="quiz-difficulty hard">Hard</span>
+          </div>
+          <h3>What does DNS stand for?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">Digital Network System</button>
+            <button class="quiz-option" data-correct="false">Data Name Server</button>
+            <button class="quiz-option" data-correct="true">Domain Name System</button>
+            <button class="quiz-option" data-correct="false">Dynamic Node Service</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <span class="quiz-category">Cloud</span>
+            <span class="quiz-difficulty easy">Easy</span>
+          </div>
+          <h3>Which company provides the AWS cloud platform?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">Google</button>
+            <button class="quiz-option" data-correct="false">Microsoft</button>
+            <button class="quiz-option" data-correct="true">Amazon</button>
+            <button class="quiz-option" data-correct="false">IBM</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <span class="quiz-category">AI & ML</span>
+            <span class="quiz-difficulty hard">Hard</span>
+          </div>
+          <h3>What is the term for an AI model learning from labeled data?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">Unsupervised Learning</button>
+            <button class="quiz-option" data-correct="true">Supervised Learning</button>
+            <button class="quiz-option" data-correct="false">Reinforcement Learning</button>
+            <button class="quiz-option" data-correct="false">Transfer Learning</button>
+          </div>
+          <div class="quiz-result"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-logo"><span class="logo-icon">✦</span> EduNews</div>
+        <p>Empowering learners worldwide with premium educational content.</p>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+        </div>
+        <p class="footer-copy">© 2026 EduNews. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </section>
+
+
+  <!-- CHAT PAGE -->
+  <section id="chatPage" class="page">
+
+    <header class="chat-header">
+      <div class="left-header">
+        <button id="backBtn">← Back</button>
+        <div class="chat-room-info">
+          <div class="chat-room-dot"></div>
+          <h2 id="roomTitle">Chat Room</h2>
+        </div>
+      </div>
+      <div class="user-switch" id="userSwitch">
+        <!-- Populated by JS -->
+      </div>
+    </header>
+
+    <div id="messages" class="messages"></div>
+
+    <div class="chat-input-box">
+      <input type="text" id="messageInput" placeholder="Type your message..." />
+      <button id="sendBtn">
+        <span>Send</span>
+        <span class="send-icon">➤</span>
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- CONTENT MODAL -->
+  <div id="contentModal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal">✕ Close</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>      <div class="hero-actions">
         <button class="btn-primary">Start Learning →</button>
         <button class="btn-ghost">Explore Topics</button>
       </div>
