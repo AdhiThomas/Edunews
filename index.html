@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduNews</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HOME PAGE -->
+  <section id="homePage" class="page active">
+
+    <header class="topbar">
+      <div class="logo">EduNews</div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search lessons, quizzes, topics..." />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+
+    <section class="hero">
+      <h1>Learn Smarter Everyday</h1>
+      <p>
+        Explore educational news, quizzes, lessons, coding tutorials,
+        business knowledge and learning resources.
+      </p>
+    </section>
+
+
+    <section class="section-title">
+      <h2>Latest Educational News</h2>
+    </section>
+
+
+    <section class="cards">
+
+      <div class="card news-card" data-title="AI Revolution in Education" data-content="Artificial Intelligence is transforming modern education by helping students learn faster through personalized learning systems, AI tutors, adaptive quizzes, and interactive simulations. Many schools are now integrating AI-powered tools to improve student engagement and make learning more efficient.">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" />
+        <h3>AI Revolution in Education</h3>
+        <p>How AI is changing classrooms worldwide.</p>
+      </div>
+
+      <div class="card news-card" data-title="Future of Space Technology" data-content="Space technology is rapidly growing with reusable rockets, private space companies, moon missions and Mars exploration projects. Engineers, scientists and programmers are becoming highly important in the future space industry.">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop" />
+        <h3>Future of Space Technology</h3>
+        <p>Engineering and science innovations.</p>
+      </div>
+
+      <div class="card news-card" data-title="Business and Entrepreneurship" data-content="Entrepreneurship helps people build innovative solutions and create opportunities. Learning finance, communication, marketing and leadership are essential skills for modern entrepreneurs.">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" />
+        <h3>Business and Entrepreneurship</h3>
+        <p>Important skills for future founders.</p>
+      </div>
+
+    </section>
+
+
+    <section class="section-title">
+      <h2>Learning Lessons</h2>
+    </section>
+
+
+    <section class="lesson-grid">
+
+      <div class="lesson-card" data-title="HTML Basics" data-content="HTML is the structure of a webpage. It uses tags like h1, p, img and div to organize content on websites.">
+        <h3>HTML Basics</h3>
+        <p>Learn webpage structure.</p>
+      </div>
+
+      <div class="lesson-card" data-title="CSS Styling" data-content="CSS is used to design and style webpages. It controls layouts, colors, fonts, spacing and responsive design.">
+        <h3>CSS Styling</h3>
+        <p>Design beautiful websites.</p>
+      </div>
+
+      <div class="lesson-card" data-title="JavaScript Fundamentals" data-content="JavaScript adds interactivity to websites. It handles buttons, animations, APIs, forms and dynamic logic.">
+        <h3>JavaScript Fundamentals</h3>
+        <p>Make websites interactive.</p>
+      </div>
+
+    </section>
+
+
+    <section class="section-title">
+      <h2>Quick Quiz</h2>
+    </section>
+
+
+    <section class="quiz-box">
+
+      <h3>What does HTML stand for?</h3>
+
+      <button class="quiz-option" data-correct="false">Hyper Trainer Marking Language</button>
+      <button class="quiz-option" data-correct="true">Hyper Text Markup Language</button>
+      <button class="quiz-option" data-correct="false">High Text Machine Language</button>
+      <button class="quiz-option" data-correct="false">Hyper Tool Multi Language</button>
+
+      <div id="quizResult"></div>
+
+    </section>
+
+  </section>
+
+
+  <!-- CHAT PAGE -->
+  <section id="chatPage" class="page">
+
+    <header class="chat-header">
+
+      <div class="left-header">
+        <button id="backBtn">Back</button>
+        <h2 id="roomTitle">Chat Room</h2>
+      </div>
+
+
+      <div class="user-switch">
+        <button class="user-btn active-user" data-user="Adhi">Adhi</button>
+        <button class="user-btn" data-user="Vishnu">Vishnu</button>
+      </div>
+
+    </header>
+
+
+    <div id="messages" class="messages"></div>
+
+
+    <div class="chat-input-box">
+      <input type="text" id="messageInput" placeholder="Type message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+
+  </section>
+
+
+  <!-- CONTENT MODAL -->
+  <div id="contentModal" class="modal">
+
+    <div class="modal-content">
+      <button id="closeModal">Close</button>
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+
+  </div>
+
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>

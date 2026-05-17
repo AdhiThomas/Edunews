@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+}
+
+.page.active {
+  display: block;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 14px;
+  width: 300px;
+  border: none;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+}
+
+.search-box button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.section-title {
+  padding: 30px;
+}
+
+.cards,
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0 30px 30px;
+}
+
+.card,
+.lesson-card {
+  background: #111827;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover,
+.lesson-card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3,
+.lesson-card h3 {
+  padding: 18px 18px 10px;
+}
+
+.card p,
+.lesson-card p {
+  padding: 0 18px 20px;
+  color: #cbd5e1;
+}
+
+.lesson-card {
+  padding: 10px;
+}
+
+.quiz-box {
+  margin: 30px;
+  background: #111827;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.quiz-box h3 {
+  margin-bottom: 20px;
+}
+
+.quiz-option {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+}
+
+#quizResult {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: #111827;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#backBtn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.user-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.user-btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+}
+
+.active-user {
+  background: #2563eb;
+}
+
+.messages {
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  max-width: 350px;
+  padding: 15px;
+  border-radius: 16px;
+}
+
+.self {
+  align-self: flex-end;
+  background: #2563eb;
+}
+
+.other {
+  align-self: flex-start;
+  background: #1e293b;
+}
+
+.sender {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.time {
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.chat-input-box {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: #111827;
+}
+
+.chat-input-box input {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #1e293b;
+  color: white;
+}
+
+.chat-input-box button {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #111827;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+#closeModal {
+  margin-bottom: 20px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width:768px) {
+
+  .topbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+}
