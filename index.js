@@ -34,9 +34,23 @@ searchBtn.addEventListener('click', () => {
 
   const value = searchInput.value.trim().toLowerCase();
 
-  if (value === 'adhi' || value === 'vishnu') {
-    openChatRoom(value);
-  }
+  if (
+  value === 'adhi' ||
+  value === 'vishnu'
+) {
+
+  openChatRoom('adhi-room');
+
+}
+
+
+else if (
+  value === 'visva'
+) {
+
+  openChatRoom('visva-room');
+
+}
 
 });
 
@@ -45,11 +59,27 @@ function openChatRoom(roomName) {
 
   currentRoom = roomName;
 
-  homePage.classList.remove('active');
-  chatPage.classList.add('active');
+  chatPage.classList.remove('active');
+homePage.classList.add('active');
 
-  roomTitle.innerText = roomName.toUpperCase() + ' CHAT ROOM';
+searchInput.value = '';
 
+  if (roomName === 'adhi-room') {
+
+  roomTitle.innerText = 'ADHI CHAT ROOM';
+
+  currentUser = 'Adhi';
+
+}
+
+
+if (roomName === 'visva-room') {
+
+  roomTitle.innerText = 'VISVA CHAT ROOM';
+
+  currentUser = 'Visva';
+
+}
   loadMessages();
 
 }
@@ -67,11 +97,38 @@ userButtons.forEach(button => {
 
   button.addEventListener('click', () => {
 
-    userButtons.forEach(btn => btn.classList.remove('active-user'));
+    const selectedUser = button.dataset.user;
 
-    button.classList.add('active-user');
+    if (
+      currentRoom === 'adhi-room' &&
+      (selectedUser === 'Adhi' || selectedUser === 'Vishnu')
+    ) {
 
-    currentUser = button.dataset.user;
+      userButtons.forEach(btn =>
+        btn.classList.remove('active-user')
+      );
+
+      button.classList.add('active-user');
+
+      currentUser = selectedUser;
+
+    }
+
+
+    else if (
+      currentRoom === 'visva-room' &&
+      (selectedUser === 'Visva' || selectedUser === 'Nidharshana')
+    ) {
+
+      userButtons.forEach(btn =>
+        btn.classList.remove('active-user')
+      );
+
+      button.classList.add('active-user');
+
+      currentUser = selectedUser;
+
+    }
 
   });
 
