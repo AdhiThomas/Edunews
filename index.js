@@ -9,29 +9,55 @@ import {
 } from './firebase.js';
 
 
-const homePage = document.getElementById('homePage');
-const chatPage = document.getElementById('chatPage');
 
-const searchBtn = document.getElementById('searchBtn');
-const searchInput = document.getElementById('searchInput');
+const homePage =
+  document.getElementById('homePage');
 
-const roomTitle = document.getElementById('roomTitle');
-const backBtn = document.getElementById('backBtn');
+const chatPage =
+  document.getElementById('chatPage');
 
-const messagesContainer = document.getElementById('messages');
+const searchBtn =
+  document.getElementById('searchBtn');
 
-const sendBtn = document.getElementById('sendBtn');
-const messageInput = document.getElementById('messageInput');
+const searchInput =
+  document.getElementById('searchInput');
 
-const userButtons = document.querySelectorAll('.user-btn');
+const roomTitle =
+  document.getElementById('roomTitle');
 
-const quizOptions = document.querySelectorAll('.quiz-option');
-const quizResult = document.getElementById('quizResult');
+const backBtn =
+  document.getElementById('backBtn');
 
-const modal = document.getElementById('contentModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalText = document.getElementById('modalText');
-const closeModal = document.getElementById('closeModal');
+const messagesContainer =
+  document.getElementById('messages');
+
+const sendBtn =
+  document.getElementById('sendBtn');
+
+const messageInput =
+  document.getElementById('messageInput');
+
+const userButtons =
+  document.querySelectorAll('.user-btn');
+
+const quizOptions =
+  document.querySelectorAll('.quiz-option');
+
+const quizResult =
+  document.getElementById('quizResult');
+
+const modal =
+  document.getElementById('contentModal');
+
+const modalTitle =
+  document.getElementById('modalTitle');
+
+const modalText =
+  document.getElementById('modalText');
+
+const closeModal =
+  document.getElementById('closeModal');
+
 
 
 let currentRoom = '';
@@ -41,19 +67,21 @@ let unsubscribeMessages = null;
 
 
 
-/* =========================================
-   SEARCH SYSTEM
-========================================= */
+/* SEARCH */
 
 searchBtn.addEventListener('click', () => {
 
-  const value = searchInput.value.trim().toLowerCase();
+  const value =
+    searchInput.value
+      .trim()
+      .toLowerCase();
 
 
   // ADHI ROOM
+
   if (
-    value === 'adhi' ||
-    value === 'vishnu'
+    value.includes('adhi') ||
+    value.includes('vishnu')
   ) {
 
     openChatRoom('adhi-room');
@@ -62,9 +90,10 @@ searchBtn.addEventListener('click', () => {
 
 
   // VISVA ROOM
+
   else if (
-    value === 'visva' ||
-    value === 'nidharshana'
+    value.includes('visva') ||
+    value.includes('nidharshana')
   ) {
 
     openChatRoom('visva-room');
@@ -75,28 +104,31 @@ searchBtn.addEventListener('click', () => {
 
 
 
-/* =========================================
-   OPEN CHAT ROOM
-========================================= */
+/* OPEN ROOM */
 
 function openChatRoom(roomName) {
 
   currentRoom = roomName;
 
 
-  // PAGE SWITCH
+  // SWITCH PAGE
+
   homePage.classList.remove('active');
+
   chatPage.classList.add('active');
 
 
   // CLEAR SEARCH
+
   searchInput.value = '';
 
 
-  // ROOM SETTINGS
+  // ROOM TITLE
+
   if (roomName === 'adhi-room') {
 
-    roomTitle.innerText = 'ADHI CHAT ROOM';
+    roomTitle.innerText =
+      'ADHI CHAT ROOM';
 
     currentUser = 'Adhi';
 
@@ -105,14 +137,16 @@ function openChatRoom(roomName) {
 
   else if (roomName === 'visva-room') {
 
-    roomTitle.innerText = 'VISVA CHAT ROOM';
+    roomTitle.innerText =
+      'VISVA CHAT ROOM';
 
     currentUser = 'Visva';
 
   }
 
 
-  // RESET ACTIVE USER BUTTONS
+  // ACTIVE BUTTON
+
   userButtons.forEach(btn => {
     btn.classList.remove('active-user');
   });
@@ -120,27 +154,29 @@ function openChatRoom(roomName) {
 
   userButtons.forEach(btn => {
 
-    if (btn.dataset.user === currentUser) {
+    if (
+      btn.dataset.user === currentUser
+    ) {
+
       btn.classList.add('active-user');
+
     }
 
   });
 
 
-  // LOAD MESSAGES
   loadMessages();
 
 }
 
 
 
-/* =========================================
-   BACK BUTTON
-========================================= */
+/* BACK */
 
 backBtn.addEventListener('click', () => {
 
   chatPage.classList.remove('active');
+
   homePage.classList.add('active');
 
   searchInput.value = '';
@@ -149,18 +185,18 @@ backBtn.addEventListener('click', () => {
 
 
 
-/* =========================================
-   USER SWITCHING
-========================================= */
+/* USER SWITCH */
 
 userButtons.forEach(button => {
 
   button.addEventListener('click', () => {
 
-    const selectedUser = button.dataset.user;
+    const selectedUser =
+      button.dataset.user;
 
 
     // ADHI ROOM USERS
+
     if (
       currentRoom === 'adhi-room' &&
       (
@@ -181,6 +217,7 @@ userButtons.forEach(button => {
 
 
     // VISVA ROOM USERS
+
     else if (
       currentRoom === 'visva-room' &&
       (
@@ -205,36 +242,50 @@ userButtons.forEach(button => {
 
 
 
-/* =========================================
-   SEND MESSAGE
-========================================= */
+/* SEND MESSAGE */
 
-sendBtn.addEventListener('click', sendMessage);
+sendBtn.addEventListener(
+  'click',
+  sendMessage
+);
 
 
-messageInput.addEventListener('keypress', (e) => {
+messageInput.addEventListener(
+  'keypress',
+  (e) => {
 
-  if (e.key === 'Enter') {
-    sendMessage();
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+
   }
+);
 
-});
 
 
 async function sendMessage() {
 
-  const text = messageInput.value.trim();
+  const text =
+    messageInput.value.trim();
 
   if (!text || !currentRoom) return;
 
 
   await addDoc(
-    collection(db, 'chatrooms', currentRoom, 'messages'),
+
+    collection(
+      db,
+      'chatrooms',
+      currentRoom,
+      'messages'
+    ),
+
     {
       sender: currentUser,
       text: text,
       timestamp: serverTimestamp()
     }
+
   );
 
 
@@ -244,100 +295,130 @@ async function sendMessage() {
 
 
 
-/* =========================================
-   LOAD REALTIME MESSAGES
-========================================= */
+/* LOAD MESSAGES */
 
 function loadMessages() {
 
 
-  // REMOVE OLD LISTENER
   if (unsubscribeMessages) {
     unsubscribeMessages();
   }
 
 
   const q = query(
-    collection(db, 'chatrooms', currentRoom, 'messages'),
+
+    collection(
+      db,
+      'chatrooms',
+      currentRoom,
+      'messages'
+    ),
+
     orderBy('timestamp', 'asc')
+
   );
 
 
-  unsubscribeMessages = onSnapshot(q, (snapshot) => {
+  unsubscribeMessages =
+    onSnapshot(q, (snapshot) => {
 
-    messagesContainer.innerHTML = '';
-
-
-    snapshot.forEach((doc) => {
-
-      const data = doc.data();
-
-      const div = document.createElement('div');
-
-      div.classList.add('message');
+      messagesContainer.innerHTML = '';
 
 
-      if (data.sender === currentUser) {
-        div.classList.add('self');
-      } else {
-        div.classList.add('other');
-      }
+      snapshot.forEach((doc) => {
+
+        const data = doc.data();
+
+        const div =
+          document.createElement('div');
+
+        div.classList.add('message');
 
 
-      const time = data.timestamp?.toDate?.()
-        ? data.timestamp.toDate().toLocaleTimeString([], {
-            hour: '2-digit',
-            minute: '2-digit'
-          })
-        : 'Sending...';
+        if (
+          data.sender === currentUser
+        ) {
+
+          div.classList.add('self');
+
+        }
+
+        else {
+
+          div.classList.add('other');
+
+        }
 
 
-      div.innerHTML = `
-        <div class="sender">${data.sender}</div>
-        <div>${data.text}</div>
-        <div class="time">${time}</div>
-      `;
+        const time =
+          data.timestamp?.toDate?.()
+
+            ? data.timestamp
+                .toDate()
+                .toLocaleTimeString([], {
+                  hour: '2-digit',
+                  minute: '2-digit'
+                })
+
+            : 'Sending...';
 
 
-      messagesContainer.appendChild(div);
+        div.innerHTML = `
+          <div class="sender">
+            ${data.sender}
+          </div>
+
+          <div>
+            ${data.text}
+          </div>
+
+          <div class="time">
+            ${time}
+          </div>
+        `;
+
+
+        messagesContainer.appendChild(div);
+
+      });
+
+
+      messagesContainer.scrollTop =
+        messagesContainer.scrollHeight;
 
     });
-
-
-    messagesContainer.scrollTop =
-      messagesContainer.scrollHeight;
-
-  });
 
 }
 
 
 
-/* =========================================
-   QUIZ SYSTEM
-========================================= */
+/* QUIZ */
 
 quizOptions.forEach(option => {
 
   option.addEventListener('click', () => {
 
-    const correct = option.dataset.correct;
+    const correct =
+      option.dataset.correct;
 
 
     if (correct === 'true') {
 
-      quizResult.innerText = 'Correct Answer';
+      quizResult.innerText =
+        'Correct Answer';
 
-      quizResult.style.color = '#22c55e';
+      quizResult.style.color =
+        '#22c55e';
 
     }
 
-
     else {
 
-      quizResult.innerText = 'Wrong Answer';
+      quizResult.innerText =
+        'Wrong Answer';
 
-      quizResult.style.color = '#ef4444';
+      quizResult.style.color =
+        '#ef4444';
 
     }
 
@@ -347,13 +428,12 @@ quizOptions.forEach(option => {
 
 
 
-/* =========================================
-   MODAL CONTENT SYSTEM
-========================================= */
+/* CONTENT MODAL */
 
-const contentCards = document.querySelectorAll(
-  '.news-card, .lesson-card'
-);
+const contentCards =
+  document.querySelectorAll(
+    '.news-card, .lesson-card'
+  );
 
 
 contentCards.forEach(card => {
@@ -362,9 +442,11 @@ contentCards.forEach(card => {
 
     modal.classList.add('active');
 
-    modalTitle.innerText = card.dataset.title;
+    modalTitle.innerText =
+      card.dataset.title;
 
-    modalText.innerText = card.dataset.content;
+    modalText.innerText =
+      card.dataset.content;
 
   });
 
@@ -372,9 +454,7 @@ contentCards.forEach(card => {
 
 
 
-/* =========================================
-   CLOSE MODAL
-========================================= */
+/* CLOSE MODAL */
 
 closeModal.addEventListener('click', () => {
 
@@ -383,15 +463,12 @@ closeModal.addEventListener('click', () => {
 });
 
 
-
-/* =========================================
-   CLOSE MODAL OUTSIDE CLICK
-========================================= */
-
 window.addEventListener('click', (e) => {
 
   if (e.target === modal) {
+
     modal.classList.remove('active');
+
   }
 
 });
