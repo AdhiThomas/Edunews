@@ -12,10 +12,6 @@ import {
 
 
 
-/* =========================================
-   FIREBASE CONFIG
-========================================= */
-
 const firebaseConfig = {
 
   apiKey: "AIzaSyCM71hhF8teq4wyRKuLSJ0n5itbxjgeAOM",
@@ -34,25 +30,11 @@ const firebaseConfig = {
 
 
 
-/* =========================================
-   INITIALIZE FIREBASE
-========================================= */
-
 const app = initializeApp(firebaseConfig);
-
-
-
-/* =========================================
-   FIRESTORE DATABASE
-========================================= */
 
 const db = getFirestore(app);
 
 
-
-/* =========================================
-   EXPORTS
-========================================= */
 
 export {
 
@@ -70,4 +52,4 @@ export {
 
   serverTimestamp
 
-};};
+};
